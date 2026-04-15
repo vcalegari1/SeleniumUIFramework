@@ -5,8 +5,7 @@ target/
 .kotlin
 
 ### Allure report ###
-allure-resul
-ts/
+allure-results/
 *.class
 ### Logs ###
 logs/
