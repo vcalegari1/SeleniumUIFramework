@@ -11,19 +11,15 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void successfulLoginTest() {
-        LoggerUtils.info("Running successfulLoginTest");
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.login(Constants.VALID_USERNAME, Constants.VALID_PASSWORD);
         Assert.assertEquals(loginPage.getLoggedInUsername(), Constants.VALID_USERNAME);
-        LoggerUtils.info("successfulLoginTest passed");
     }
 
     @Test
     public void invalidLoginTest() {
-        LoggerUtils.info("Running invalidLoginTest");
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.login(Constants.INVALID_USERNAME, Constants.INVALID_PASSWORD);
         Assert.assertEquals(loginPage.getErrorMessage(), Constants.INVALID_LOGIN_MESSAGE);
-        LoggerUtils.info("invalidLoginTest passed");
     }
 }

@@ -51,5 +51,6 @@ public class BaseTest {
             driver.remove();
             LoggerUtils.info("Browser closed successfully");
         }
+        LoggerUtils.info("--------------------------------------------------");
     }
 }
