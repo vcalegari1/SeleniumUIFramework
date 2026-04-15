@@ -5,8 +5,11 @@ target/
 .kotlin
 
 ### Allure report ###
-allure-results/
+allure-resul
+ts/
 *.class
+### Logs ###
+logs/
 
 ### IntelliJ IDEA ###
 .idea

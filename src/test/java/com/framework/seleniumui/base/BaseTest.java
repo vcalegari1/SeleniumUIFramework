@@ -1,6 +1,7 @@
 package com.framework.seleniumui.base;
 
 import com.framework.seleniumui.config.ConfigReader;
+import com.framework.seleniumui.utils.LoggerUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +15,9 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
+        LoggerUtils.info("Starting test setup...");
         String browser = ConfigReader.getInstance().getProperty("browser");
+        LoggerUtils.info("Browser selected: " + browser);
         WebDriver webDriver;
 
         switch (browser.toLowerCase()) {
@@ -32,6 +35,8 @@ public class BaseTest {
         webDriver.manage().window().maximize();
         webDriver.get(ConfigReader.getInstance().getProperty("baseUrl"));
         driver.set(webDriver);
+        LoggerUtils.info("Browser launched and navigated to: " +
+                ConfigReader.getInstance().getProperty("baseUrl"));
     }
 
     public static WebDriver getDriver() {
@@ -40,9 +45,11 @@ public class BaseTest {
 
     @AfterMethod
     public void tearDown() {
+        LoggerUtils.info("Tearing down test...");
         if (getDriver() != null) {
             getDriver().quit();
             driver.remove();
+            LoggerUtils.info("Browser closed successfully");
         }
     }
 }
