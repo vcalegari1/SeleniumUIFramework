@@ -11,6 +11,9 @@ allure-results/
 ### Logs ###
 logs/
 
+### Screenshots ###
+screenshots/
+
 ### IntelliJ IDEA ###
 .idea
 *.iws

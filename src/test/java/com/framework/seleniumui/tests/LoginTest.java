@@ -13,7 +13,9 @@ public class LoginTest extends BaseTest {
     public void successfulLoginTest() {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.login(Constants.VALID_USERNAME, Constants.VALID_PASSWORD);
-        Assert.assertEquals(loginPage.getLoggedInUsername(), Constants.VALID_USERNAME);
+        //Assert.assertEquals(loginPage.getLoggedInUsername(), Constants.VALID_USERNAME);
+        //forcing the test to fail
+        Assert.assertEquals(loginPage.getLoggedInUsername(), "wrongname");
     }
 
     @Test
