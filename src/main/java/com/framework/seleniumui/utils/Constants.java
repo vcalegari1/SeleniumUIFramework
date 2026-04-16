@@ -22,4 +22,7 @@ public class Constants {
 
     // Messages
     public static final String INVALID_LOGIN_MESSAGE = "Invalid username or password!";
+
+    // Retry
+    public static final int RETRY_COUNT = 2;
 }

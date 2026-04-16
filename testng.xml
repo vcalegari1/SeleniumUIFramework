@@ -4,6 +4,7 @@
 
     <listeners>
         <listener class-name="com.framework.seleniumui.listeners.TestListener"/>
+        <listener class-name="com.framework.seleniumui.listeners.RetryListener"/>
     </listeners>
 
     <test name="Login Tests">
