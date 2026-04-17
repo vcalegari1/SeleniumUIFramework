@@ -4,10 +4,25 @@
 
     <listeners>
         <listener class-name="com.framework.seleniumui.listeners.TestListener"/>
-        <listener class-name="com.framework.seleniumui.listeners.RetryListener"/>
     </listeners>
 
-    <test name="Login Tests">
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.framework.seleniumui.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         <classes>
             <class name="com.framework.seleniumui.tests.LoginTest"/>
         </classes>

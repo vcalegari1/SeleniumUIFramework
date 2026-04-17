@@ -13,7 +13,7 @@ public class BaseTest {
 
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         LoggerUtils.info("Starting test setup...");
         String browser = ConfigReader.getInstance().getProperty("browser");
@@ -43,7 +43,7 @@ public class BaseTest {
         return driver.get();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         LoggerUtils.info("Tearing down test...");
         if (getDriver() != null) {

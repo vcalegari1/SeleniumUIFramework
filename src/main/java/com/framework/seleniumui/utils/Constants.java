@@ -10,7 +10,7 @@ public class Constants {
     public static final String WIDGETS_URL = "https://demoqa.com/widgets";
 
     // Timeouts
-    public static final int EXPLICIT_WAIT = 10;
+    public static final int EXPLICIT_WAIT = 15;
     public static final int IMPLICIT_WAIT = 5;
     public static final int PAGE_LOAD_TIMEOUT = 30;
 
@@ -25,4 +25,9 @@ public class Constants {
 
     // Retry
     public static final int RETRY_COUNT = 2;
+
+    // Test Groups
+    public static final String SMOKE = "smoke";
+    public static final String REGRESSION = "regression";
+    public static final String E2E = "e2e";
 }
